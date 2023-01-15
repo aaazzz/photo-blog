@@ -6,6 +6,12 @@ const client = createClient({
 });
 
 //型定義
+export type Image = {
+  url: string;
+  height: number;
+  width: number;
+}
+
 export type Blog = {
   id: string;
   createdAt: string;
@@ -14,6 +20,7 @@ export type Blog = {
   revisedAt: string;
   title: string;
   content: string;
+  eyecatch: Image;
 };
 export type BlogResponse = {
   totalCount: number;
